@@ -45,14 +45,14 @@ export const UsageGrid: React.FC = () => {
           {locations.map((loc, idx) => (
             <div
               key={loc.name}
-              className="group cursor-pointer"
+              className="group perspective-container cursor-pointer"
               onClick={() => setActiveItem(activeItem === idx ? null : idx)}
             >
-              <div className="relative aspect-[3/4] overflow-hidden rounded-sm mb-8 shadow-sm">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-sm mb-8 shadow-sm hover-3d">
                 <img
                   src={loc.img}
                   alt={loc.name}
-                  className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-all duration-1000"
                   onError={(e) => {
                     e.currentTarget.src = `https://placehold.co/600x800?text=${loc.name}`;
                   }}

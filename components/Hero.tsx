@@ -28,16 +28,18 @@ export const Hero: React.FC = () => {
             Explore Science
           </a>
 
-          {/* High Quality Diagram - Now centered below text */}
-          <div className="w-full max-w-5xl mt-12 transition-all duration-1000 group">
-            <img
-              src="bedroom-airflow.jpg"
-              alt="mijah Airflow Diagram"
-              className="w-full h-auto object-contain filter drop-shadow-[0_40px_80px_rgba(0,0,0,0.08)] md:group-hover:scale-[1.01] transition-transform duration-1000"
-              onError={(e) => {
-                e.currentTarget.src = 'https://placehold.co/1200x800?text=Upload+bedroom-airflow.jpg';
-              }}
-            />
+          {/* High Quality Diagram - Now centered with 3D perspective */}
+          <div className="w-full max-w-5xl mt-12 mb-20 perspective-container group">
+            <div className="hover-3d">
+              <img
+                src="bedroom-airflow.jpg"
+                alt="mijah Airflow Diagram"
+                className="w-full h-auto object-contain filter drop-shadow-[0_40px_80px_rgba(0,0,0,0.1)] transition-all duration-1000"
+                onError={(e) => {
+                  e.currentTarget.src = 'https://placehold.co/1200x800?text=Upload+bedroom-airflow.jpg';
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>

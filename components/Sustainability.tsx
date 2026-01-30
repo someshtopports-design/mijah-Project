@@ -18,13 +18,15 @@ export const Sustainability: React.FC = () => {
           </p>
         </div>
 
-        <div className="w-full max-w-5xl relative group">
+        <div className="w-full max-w-5xl relative group perspective-container">
           <div className="absolute -inset-10 bg-white/5 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-          <img
-            src="product-packaging.jpg"
-            alt="Sustainable recyclable paper packaging"
-            className="relative w-full h-auto rounded-sm shadow-2xl grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 aspect-[16/9] object-cover"
-          />
+          <div className="hover-3d">
+            <img
+              src="product-packaging.jpg"
+              alt="Sustainable recyclable paper packaging"
+              className="relative w-full h-auto rounded-sm shadow-2xl grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 aspect-[16/9] object-cover"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 w-full pt-12 border-t border-white/10">

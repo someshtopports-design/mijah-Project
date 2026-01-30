@@ -10,7 +10,33 @@ import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 
 const App: React.FC = () => {
+  const [isNavHidden, setIsNavHidden] = React.useState(false);
+  const [isNavScrolled, setIsNavScrolled] = React.useState(false);
+  const lastScrollY = React.useRef(0);
+
   useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Glassmorphism trigger
+      if (currentScrollY > 50) {
+        setIsNavScrolled(true);
+      } else {
+        setIsNavScrolled(false);
+      }
+
+      // Hide/Show logic
+      if (currentScrollY > lastScrollY.current && currentScrollY > 200) {
+        setIsNavHidden(true); // Scrolling down
+      } else {
+        setIsNavHidden(false); // Scrolling up
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
     const observerOptions = {
       threshold: 0.1,
     };
@@ -26,13 +52,16 @@ const App: React.FC = () => {
     const sections = document.querySelectorAll('.fade-in-section');
     sections.forEach((section) => observer.observe(section));
 
-    return () => observer.disconnect();
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (
     <div className="min-h-screen">
-      <nav className="fixed top-0 left-0 w-full z-50 py-10 px-8 md:px-16 transition-all duration-500 bg-transparent">
-        <div className="max-w-7xl mx-auto w-full grid grid-cols-3 items-center">
+      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${isNavHidden ? 'nav-hidden' : ''} ${isNavScrolled ? 'nav-scrolled' : 'py-10 px-8 md:px-16 bg-transparent'}`}>
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-3 items-center px-8 md:px-16">
           {/* Left Links */}
           <div className="flex space-x-12 items-center justify-start">
             <a href="#about" className="uppercase-tracking hover:opacity-40 transition-opacity">Philosophy</a>
