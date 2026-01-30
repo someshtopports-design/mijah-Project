@@ -29,63 +29,80 @@ export const UsageGrid: React.FC = () => {
   const [activeItem, setActiveItem] = useState<number | null>(null);
 
   return (
-    <div className="py-20 md:py-32">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-normal mb-6 serif">Where it works</h2>
-          <p className="text-sm md:text-base opacity-60 max-w-xl mx-auto uppercase tracking-widest">Click to explore the science of freshness</p>
+    <div className="py-24 md:py-40">
+      <div className="max-w-7xl mx-auto px-8 md:px-16">
+        {/* Header */}
+        <div className="text-center mb-24">
+          <span className="uppercase-tracking text-[#8da399] mb-6 block">Versatility</span>
+          <h2 className="text-5xl md:text-7xl font-light mb-8 serif text-[#1a1a1a]">Where it works</h2>
+          <p className="text-lg font-light text-[#4a4a4a] max-w-2xl mx-auto leading-relaxed">
+            Designed to fit seamlessly into your daily life, from the shoes you wear to the spaces you inhabit.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {locations.map((loc, idx) => (
             <div
-              key={idx}
-              className={`cursor-pointer group transition-all duration-500 ${activeItem === idx ? 'md:scale-105' : ''}`}
+              key={loc.name}
+              className="group cursor-pointer"
               onClick={() => setActiveItem(activeItem === idx ? null : idx)}
             >
-              <div className="aspect-[3/4] overflow-hidden rounded-sm mb-6 relative shadow-sm group-hover:shadow-xl transition-shadow">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-sm mb-8 shadow-sm">
                 <img
                   src={loc.img}
                   alt={loc.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
+                  onError={(e) => {
+                    e.currentTarget.src = `https://placehold.co/600x800?text=${loc.name}`;
+                  }}
                 />
-                <div className={`absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity duration-300 ${activeItem === idx ? 'opacity-100' : 'opacity-0'}`}>
-                  <span className="text-white text-xs uppercase tracking-[0.3em] border border-white/30 px-4 py-2">Details</span>
+                <div className={`absolute inset-0 bg-[#1a1a1a]/40 flex items-center justify-center transition-opacity duration-500 ${activeItem === idx ? 'opacity-100' : 'opacity-0 md:group-hover:opacity-100'}`}>
+                  <span className="text-white text-[0.6rem] uppercase-tracking border border-white/30 px-6 py-3 backdrop-blur-sm">
+                    {activeItem === idx ? 'Close Details' : 'View Details'}
+                  </span>
                 </div>
               </div>
-              <h3 className="text-lg serif mb-2 text-center">{loc.name}</h3>
-              <p className={`text-sm font-light leading-relaxed text-center transition-all duration-500 ${activeItem === idx ? 'opacity-100 max-h-40 mt-4' : 'opacity-0 max-h-0 pointer-events-none'}`}>
-                {loc.description}
-              </p>
+              <h3 className="text-2xl font-light mb-4 serif text-center transition-colors group-hover:text-[#8da399]">{loc.name}</h3>
+
+              <div className={`overflow-hidden transition-all duration-700 ease-in-out ${activeItem === idx ? 'max-h-60 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                <p className="text-sm font-light leading-relaxed text-[#4a4a4a] border-l-2 border-[#8da399]/20 pl-6 py-2">
+                  {loc.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
 
-        {/* Ingredient Science Section */}
-        <div className="mt-32 pt-20 border-t border-black/5">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="order-2 md:order-1">
+        {/* Science Section */}
+        <div className="mt-40 pt-40 border-t border-black/5">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
+            <div className="order-2 lg:order-1 relative group">
+              <div className="absolute -inset-4 bg-[#8da399]/5 rounded-sm rotate-1 transition-transform group-hover:rotate-0 duration-700"></div>
               <img
                 src="shoe-odour-science.jpg"
                 alt="Shoe Odour Science"
-                className="w-full h-auto rounded-lg shadow-2xl"
+                className="relative w-full h-auto rounded-sm shadow-2xl transition-all duration-1000 grayscale-[0.3] group-hover:grayscale-0"
               />
             </div>
-            <div className="space-y-10 order-1 md:order-2">
-              <h2 className="text-4xl md:text-5xl font-normal serif italic">The Power of Choice Ingredients</h2>
+            <div className="space-y-12 order-1 lg:order-2">
+              <span className="uppercase-tracking text-[#8da399]">Ingredient Science</span>
+              <h2 className="text-5xl md:text-7xl font-light serif leading-tight text-[#1a1a1a]">
+                The Power of <br /><span className="italic">Choice Materials.</span>
+              </h2>
 
-              <div className="space-y-8">
-                <div className="bg-white p-8 rounded-sm shadow-sm border-l-4 border-[#8da399]">
-                  <h4 className="font-bold text-sm uppercase tracking-widest mb-4">Tea Leaves (The Neutralizer)</h4>
-                  <p className="text-sm font-light leading-relaxed opacity-80">
-                    Naturally rich in polyphenols, tea leaves don't just mask odours—they chemically bind to and neutralize offensive smell molecules at the source. This provides a deep, non-synthetic freshness.
+              <div className="space-y-10">
+                <div className="space-y-4">
+                  <h4 className="text-sm font-medium uppercase-tracking text-[#1a1a1a]">Tea Leaves | The Neutralizer</h4>
+                  <p className="text-lg font-light leading-relaxed text-[#4a4a4a]">
+                    Naturally rich in polyphenols, our treated tea leaves bind to offensive smell molecules, neutralizing them at the source instead of just masking them.
                   </p>
                 </div>
 
-                <div className="bg-white p-8 rounded-sm shadow-sm border-l-4 border-[#333]">
-                  <h4 className="font-bold text-sm uppercase tracking-widest mb-4">Activated Charcoal (The Magnet)</h4>
-                  <p className="text-sm font-light leading-relaxed opacity-80">
-                    With millions of microscopic pores, activated charcoal acts like a physical magnet, traps moisture (which causes bacterial growth) and larger odour particles through a process called adsorption.
+                <div className="space-y-4">
+                  <h4 className="text-sm font-medium uppercase-tracking text-[#1a1a1a]">Activated Charcoal | The Magnet</h4>
+                  <p className="text-lg font-light leading-relaxed text-[#4a4a4a]">
+                    With millions of microscopic pores, physical adsorption traps moisture and toxins, preventing bacterial growth and stale air.
                   </p>
                 </div>
               </div>

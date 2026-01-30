@@ -3,25 +3,52 @@ import React from 'react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="border-t border-black/5 py-16 px-8 md:px-24">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-        <div>
-          <span className="text-2xl font-medium tracking-widest serif uppercase">mijah</span>
-          <p className="mt-4 text-xs opacity-40 max-w-[240px] leading-loose">
-            Creating healthier spaces through natural absorption. Designed for modern life.
-          </p>
+    <footer className="py-24 px-8 md:px-16 border-t border-black/5 bg-transparent">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-16 md:gap-32">
+          <div className="space-y-8">
+            <span className="text-4xl font-light tracking-[0.4em] serif uppercase">mijah</span>
+            <p className="text-sm font-light text-[#4a4a4a] max-w-sm leading-relaxed">
+              Redefining fresh air through the silent, scientific power of nature. Designed for the modern home.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-16">
+            <div className="space-y-6">
+              <span className="uppercase-tracking text-[#1a1a1a]">Navigation</span>
+              <div className="flex flex-col gap-4">
+                <a href="#about" className="text-sm font-light text-[#4a4a4a] hover:text-[#8da399] transition-colors">Philosophy</a>
+                <a href="#usage" className="text-sm font-light text-[#4a4a4a] hover:text-[#8da399] transition-colors">Usage</a>
+                <a href="#how" className="text-sm font-light text-[#4a4a4a] hover:text-[#8da399] transition-colors">Science</a>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <span className="uppercase-tracking text-[#1a1a1a]">Company</span>
+              <div className="flex flex-col gap-4">
+                <a href="#sustainability" className="text-sm font-light text-[#4a4a4a] hover:text-[#8da399] transition-colors">Sustainability</a>
+                <a href="#" className="text-sm font-light text-[#4a4a4a] hover:text-[#8da399] transition-colors">Contact</a>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <span className="uppercase-tracking text-[#1a1a1a]">Connect</span>
+              <div className="flex flex-col gap-4">
+                <a href="#" className="text-sm font-light text-[#4a4a4a] hover:text-[#8da399] transition-colors">Instagram</a>
+                <a href="#" className="text-sm font-light text-[#4a4a4a] hover:text-[#8da399] transition-colors">LinkedIn</a>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div className="flex flex-wrap gap-x-12 gap-y-4 text-xs uppercase tracking-widest font-medium opacity-60">
-          <a href="#" className="hover:opacity-100 transition-opacity">About</a>
-          <a href="#" className="hover:opacity-100 transition-opacity">Sustainability</a>
-          <a href="#" className="hover:opacity-100 transition-opacity">Contact</a>
-          <a href="#" className="hover:opacity-100 transition-opacity">Instagram</a>
+
+        <div className="mt-24 pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-8">
+          <p className="text-[0.6rem] uppercase tracking-[0.3em] text-[#4a4a4a] opacity-50">© 2024 mijah projects. All rights reserved.</p>
+          <div className="flex gap-8">
+            <span className="text-[0.6rem] uppercase tracking-[0.3em] text-[#4a4a4a] opacity-50 italic">Pure</span>
+            <span className="text-[0.6rem] uppercase tracking-[0.3em] text-[#4a4a4a] opacity-50 italic">Silent</span>
+            <span className="text-[0.6rem] uppercase tracking-[0.3em] text-[#4a4a4a] opacity-50 italic">Sustainable</span>
+          </div>
         </div>
-      </div>
-      <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-black/5 flex justify-between items-center">
-        <p className="text-[10px] uppercase tracking-widest opacity-30">© 2024 mijah studios. All rights reserved.</p>
-        <p className="text-[10px] uppercase tracking-widest opacity-30 italic">Pure. Silent. Sustainable.</p>
       </div>
     </footer>
   );

@@ -31,13 +31,15 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <nav className="fixed top-0 left-0 w-full z-50 py-6 px-8 md:px-16 flex justify-between items-center transition-all duration-300">
-        <span className="text-2xl font-medium tracking-widest serif uppercase cursor-pointer">mijah</span>
-        <div className="hidden md:flex space-x-12 text-xs uppercase tracking-widest font-medium">
-          <a href="#about" className="hover:opacity-60 transition-opacity">Philosophy</a>
-          <a href="#usage" className="hover:opacity-60 transition-opacity">Usage</a>
-          <a href="#how" className="hover:opacity-60 transition-opacity">Science</a>
-          <a href="#sustainability" className="hover:opacity-60 transition-opacity">Sustainability</a>
+      <nav className="fixed top-0 left-0 w-full z-50 py-8 px-8 md:px-16 flex justify-between items-center transition-all duration-500 bg-transparent">
+        <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
+          <span className="text-3xl font-light tracking-[0.4em] serif uppercase cursor-pointer">mijah</span>
+          <div className="hidden md:flex space-x-12 items-center">
+            <a href="#about" className="uppercase-tracking hover:opacity-40 transition-opacity">Philosophy</a>
+            <a href="#usage" className="uppercase-tracking hover:opacity-40 transition-opacity">Usage</a>
+            <a href="#how" className="uppercase-tracking hover:opacity-40 transition-opacity">Science</a>
+            <a href="#sustainability" className="uppercase-tracking hover:opacity-40 transition-opacity">Sustainability</a>
+          </div>
         </div>
       </nav>
 
