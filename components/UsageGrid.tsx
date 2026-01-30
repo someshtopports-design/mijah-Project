@@ -29,10 +29,10 @@ export const UsageGrid: React.FC = () => {
   const [activeItem, setActiveItem] = useState<number | null>(null);
 
   return (
-    <div className="py-24 md:py-40">
+    <div className="py-32 md:py-52 text-center">
       <div className="max-w-7xl mx-auto px-8 md:px-16">
         {/* Header */}
-        <div className="text-center mb-24">
+        <div className="text-center mb-32">
           <span className="uppercase-tracking text-[#8da399] mb-6 block">Versatility</span>
           <h2 className="text-5xl md:text-7xl font-light mb-8 serif text-[#1a1a1a]">Where it works</h2>
           <p className="text-lg font-light text-[#4a4a4a] max-w-2xl mx-auto leading-relaxed">

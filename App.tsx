@@ -31,12 +31,21 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <nav className="fixed top-0 left-0 w-full z-50 py-8 px-8 md:px-16 flex justify-between items-center transition-all duration-500 bg-transparent">
-        <div className="max-w-7xl mx-auto w-full flex justify-between items-center">
-          <span className="text-3xl font-light tracking-[0.4em] serif uppercase cursor-pointer">mijah</span>
-          <div className="hidden md:flex space-x-12 items-center">
+      <nav className="fixed top-0 left-0 w-full z-50 py-10 px-8 md:px-16 transition-all duration-500 bg-transparent">
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-3 items-center">
+          {/* Left Links */}
+          <div className="flex space-x-12 items-center justify-start">
             <a href="#about" className="uppercase-tracking hover:opacity-40 transition-opacity">Philosophy</a>
             <a href="#usage" className="uppercase-tracking hover:opacity-40 transition-opacity">Usage</a>
+          </div>
+
+          {/* Center Logo */}
+          <div className="flex justify-center">
+            <span className="text-4xl font-light tracking-[0.5em] serif uppercase cursor-pointer">mijah</span>
+          </div>
+
+          {/* Right Links */}
+          <div className="flex space-x-12 items-center justify-end">
             <a href="#how" className="uppercase-tracking hover:opacity-40 transition-opacity">Science</a>
             <a href="#sustainability" className="uppercase-tracking hover:opacity-40 transition-opacity">Sustainability</a>
           </div>
