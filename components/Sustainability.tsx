@@ -3,7 +3,7 @@ import React from 'react';
 
 export const Sustainability: React.FC = () => {
   return (
-    <div className="bg-[#f2efe6] py-20 md:py-32">
+    <div className="bg-[#f2efe6]/40 py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center gap-16">
         <div className="flex-1 w-full order-2 md:order-1">
           <img

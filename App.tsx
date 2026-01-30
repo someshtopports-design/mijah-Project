@@ -41,13 +41,15 @@ const App: React.FC = () => {
         </div>
       </nav>
 
-      <main className="relative">
+      <main className="relative min-h-screen">
+        {/* Global Nature-friendly Background Pattern */}
         <div
-          className="fixed inset-0 z-0 opacity-[0.03] pointer-events-none"
+          className="fixed inset-0 z-0 opacity-[0.06]"
           style={{
             backgroundImage: 'url("tea-leaf-pattern.png")',
-            backgroundSize: '500px',
-            backgroundRepeat: 'repeat'
+            backgroundSize: '400px',
+            backgroundRepeat: 'repeat',
+            pointerEvents: 'none'
           }}
         ></div>
 

@@ -29,7 +29,7 @@ export const UsageGrid: React.FC = () => {
   const [activeItem, setActiveItem] = useState<number | null>(null);
 
   return (
-    <div className="bg-[#f9f8f4] py-20 md:py-32">
+    <div className="py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-normal mb-6 serif">Where it works</h2>
