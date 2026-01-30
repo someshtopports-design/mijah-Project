@@ -3,16 +3,8 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <div className="relative h-screen w-full flex flex-col md:flex-row bg-white overflow-hidden">
-      {/* Nature-friendly Background Pattern */}
-      <div
-        className="absolute inset-0 z-0 opacity-[0.07] pointer-events-none"
-        style={{
-          backgroundImage: 'url("tea-leaf-pattern.png")',
-          backgroundSize: '400px',
-          backgroundRepeat: 'repeat'
-        }}
-      ></div>
+    <div className="relative h-screen w-full flex flex-col md:flex-row bg-transparent overflow-hidden">
+      {/* Nature-friendly pattern is now handled globally in App.tsx */}
 
       {/* Brand Watermark */}
       <div className="absolute top-1/2 left-4 -translate-y-1/2 hidden lg:block opacity-[0.03] select-none pointer-events-none z-10">
