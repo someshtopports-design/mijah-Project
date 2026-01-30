@@ -41,26 +41,37 @@ const App: React.FC = () => {
         </div>
       </nav>
 
-      <main>
-        <Hero />
-        <section id="about" className="fade-in-section">
-          <About />
-        </section>
-        <section id="usage" className="fade-in-section">
-          <UsageGrid />
-        </section>
-        <section id="how" className="fade-in-section">
-          <HowItWorks />
-        </section>
-        <section className="fade-in-section">
-          <Gallery />
-        </section>
-        <section id="sustainability" className="fade-in-section">
-          <Sustainability />
-        </section>
-        <section className="fade-in-section">
-          <FinalCTA />
-        </section>
+      <main className="relative">
+        <div
+          className="fixed inset-0 z-0 opacity-[0.03] pointer-events-none"
+          style={{
+            backgroundImage: 'url("tea-leaf-pattern.png")',
+            backgroundSize: '500px',
+            backgroundRepeat: 'repeat'
+          }}
+        ></div>
+
+        <div className="relative z-10">
+          <Hero />
+          <section id="about" className="fade-in-section">
+            <About />
+          </section>
+          <section id="usage" className="fade-in-section">
+            <UsageGrid />
+          </section>
+          <section id="how" className="fade-in-section">
+            <HowItWorks />
+          </section>
+          <section className="fade-in-section">
+            <Gallery />
+          </section>
+          <section id="sustainability" className="fade-in-section">
+            <Sustainability />
+          </section>
+          <section className="fade-in-section">
+            <FinalCTA />
+          </section>
+        </div>
       </main>
 
       <Footer />

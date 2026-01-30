@@ -3,14 +3,24 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <div className="relative h-screen w-full flex flex-col md:flex-row bg-[#fdfcf9] overflow-hidden">
+    <div className="relative h-screen w-full flex flex-col md:flex-row bg-white overflow-hidden">
+      {/* Nature-friendly Background Pattern */}
+      <div
+        className="absolute inset-0 z-0 opacity-[0.07] pointer-events-none"
+        style={{
+          backgroundImage: 'url("tea-leaf-pattern.png")',
+          backgroundSize: '400px',
+          backgroundRepeat: 'repeat'
+        }}
+      ></div>
+
       {/* Brand Watermark */}
-      <div className="absolute top-1/2 left-4 -translate-y-1/2 hidden lg:block opacity-[0.03] select-none pointer-events-none">
+      <div className="absolute top-1/2 left-4 -translate-y-1/2 hidden lg:block opacity-[0.03] select-none pointer-events-none z-10">
         <span className="text-[15rem] font-bold serif uppercase tracking-tighter">mijah</span>
       </div>
 
       {/* Left Column: Content */}
-      <div className="relative z-10 w-full md:w-[40%] h-full flex flex-col justify-center px-8 md:px-16 py-20">
+      <div className="relative z-20 w-full md:w-[40%] h-full flex flex-col justify-center px-8 md:px-16 py-20 bg-white/40 md:bg-transparent">
         <div className="max-w-md">
           <h1 className="text-5xl md:text-7xl font-normal leading-tight mb-8 serif text-[#222]">
             Odour-free <br />spaces. <br />
@@ -29,7 +39,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Right Column: High Quality Diagram */}
-      <div className="relative w-full md:w-[60%] h-full flex items-center justify-center p-6 md:p-12 bg-white/50">
+      <div className="relative z-20 w-full md:w-[60%] h-full flex items-center justify-center p-6 md:p-12">
         <div className="relative w-full h-full max-w-5xl max-h-[85vh] flex items-center justify-center group">
           <img
             src="bedroom-airflow.jpg"
