@@ -28,12 +28,12 @@ export const Hero: React.FC = () => {
             Explore Science
           </a>
 
-          {/* High Quality Diagram - Now centered with 3D perspective */}
+          {/* Scientific Diagram - Centered with 3D perspective */}
           <div className="w-full max-w-5xl mt-12 mb-10 md:mb-20 perspective-container group">
             <div className="hover-3d">
               <img
-                src="mijah-box-premium.jpg"
-                alt="mijah Airflow Diagram"
+                src="mijah-primary.png"
+                alt="mijah Scientific Airflow Diagram"
                 className="w-full h-auto object-contain filter drop-shadow-[0_40px_80px_rgba(0,0,0,0.1)] transition-all duration-1000"
                 onError={(e) => {
                   e.currentTarget.src = 'bedroom-airflow.jpg';
