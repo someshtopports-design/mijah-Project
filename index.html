@@ -1,51 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mijah | Odour-free spaces. Naturally.</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@100;200;300;400;500&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        --premium-black: #1a1a1a;
-        --premium-gray: #4a4a4a;
-        --luxury-beige: #fdfaf5;
-      }
-      body {
-        font-family: 'Outfit', sans-serif;
-        background-color: var(--luxury-beige);
-        color: var(--premium-black);
-        -webkit-font-smoothing: antialiased;
-        letter-spacing: 0.01em;
-      }
-      h1, h2, h3, .serif {
-        font-family: 'Cormorant Garamond', serif;
-        font-weight: 400;
-      }
-      .uppercase-tracking {
-        text-transform: uppercase;
-        letter-spacing: 0.25em;
-        font-size: 0.65rem;
-        font-weight: 500;
-      }
-      .fade-in-section {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 1.2s cubic-bezier(0.2, 0, 0.2, 1), transform 1.2s cubic-bezier(0.2, 0, 0.2, 1);
-      }
-      .fade-in-section.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      ::selection {
-        background: #e2e8f0;
-        color: #1a1a1a;
-      }
-    </style>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mijah | Odour-free spaces. Naturally.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/index.css">
   <script type="importmap">
 {
   "imports": {
@@ -55,10 +18,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

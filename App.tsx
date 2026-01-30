@@ -43,17 +43,9 @@ const App: React.FC = () => {
         </div>
       </nav>
 
-      <main className="relative min-h-screen">
-        {/* Global Nature-friendly Background Pattern - Increased visibility */}
-        <div
-          className="fixed inset-0 z-0 opacity-[0.15]"
-          style={{
-            backgroundImage: 'url("/tea-leaf-pattern.png")',
-            backgroundSize: '400px',
-            backgroundRepeat: 'repeat',
-            pointerEvents: 'none'
-          }}
-        ></div>
+      <main className="relative min-h-screen charcoal-texture">
+        {/* Global Nature-friendly Background Pattern - High visibility and premium texture */}
+        <div className="fixed inset-0 z-0 pattern-overlay pointer-events-none"></div>
 
         <div className="relative z-10">
           <Hero />
