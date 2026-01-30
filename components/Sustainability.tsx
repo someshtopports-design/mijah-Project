@@ -3,17 +3,17 @@ import React from 'react';
 
 export const Sustainability: React.FC = () => {
   return (
-    <div className="charcoal-gradient charcoal-texture py-32 md:py-52 text-white relative overflow-hidden">
+    <div className="charcoal-gradient charcoal-texture py-20 md:py-52 text-white relative overflow-hidden">
       {/* Decorative leaf for this section */}
       <div className="absolute inset-0 opacity-[0.03] pattern-overlay pointer-events-none"></div>
 
-      <div className="max-w-4xl mx-auto px-8 flex flex-col items-center text-center gap-24 relative z-10">
-        <div className="space-y-12">
-          <span className="uppercase-tracking text-[#8da399]">Ethical Roots</span>
-          <h2 className="text-6xl md:text-7xl font-light serif leading-tight text-white">
+      <div className="max-w-4xl mx-auto px-6 md:px-8 flex flex-col items-center text-center gap-16 md:gap-24 relative z-10">
+        <div className="space-y-8 md:space-y-12">
+          <span className="uppercase-tracking text-[#8da399] text-[0.65rem] md:text-sm">Ethical Roots</span>
+          <h2 className="text-4xl md:text-7xl font-light serif leading-tight text-white">
             Made with <span className="italic">Nature.</span>
           </h2>
-          <p className="text-xl font-light text-white/50 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl font-light text-white/50 max-w-2xl mx-auto leading-relaxed">
             Every mijah pouch is a commitment to a chemical-free future, using materials that respect both your home and the planet.
           </p>
         </div>

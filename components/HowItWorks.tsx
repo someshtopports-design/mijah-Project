@@ -3,22 +3,22 @@ import React from 'react';
 
 export const HowItWorks: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto px-8 md:px-16 py-32 md:py-52">
-      <div className="text-center mb-32">
-        <span className="uppercase-tracking text-[#8da399] mb-8 block">Technical Design</span>
-        <h2 className="text-6xl md:text-8xl font-light mb-12 serif text-[#1a1a1a]">How it works</h2>
-        <p className="text-xl font-light text-[#4a4a4a] max-w-2xl mx-auto leading-relaxed italic">
+    <div className="max-w-7xl mx-auto px-6 md:px-16 py-20 md:py-52">
+      <div className="text-center mb-20 md:mb-32">
+        <span className="uppercase-tracking text-[#8da399] mb-6 block text-[0.65rem] md:text-sm">Technical Design</span>
+        <h2 className="text-4xl md:text-8xl font-light mb-8 md:mb-12 serif text-[#1a1a1a]">How it works</h2>
+        <p className="text-lg md:text-xl font-light text-[#4a4a4a] max-w-2xl mx-auto leading-relaxed italic">
           The science of silence. A passive, continuous cycle of air purification that requires zero electricity and zero chemicals.
         </p>
       </div>
 
-      <div className="mb-48 relative group max-w-5xl mx-auto">
+      <div className="mb-32 md:mb-48 relative group max-w-5xl mx-auto perspective-container">
         <div className="absolute inset-0 bg-[#8da399]/5 blur-3xl rounded-full scale-75 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-        <div className="relative rounded-sm overflow-hidden border border-black/5 bg-white/50 backdrop-blur-sm p-8 md:p-24 shadow-2xl transition-transform duration-700 md:group-hover:translate-y-[-10px]">
+        <div className="hover-3d relative rounded-sm overflow-hidden border border-black/5 bg-white/50 backdrop-blur-sm p-4 md:p-12 shadow-2xl transition-all duration-700">
           <img
-            src="airflow-diagram.png"
+            src="mijah-box-premium.jpg"
             alt="Technical Airflow Diagram"
-            className="max-w-full mx-auto grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000"
+            className="max-w-full mx-auto grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000"
           />
         </div>
       </div>

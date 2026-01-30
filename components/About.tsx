@@ -3,13 +3,13 @@ import React from 'react';
 
 export const About: React.FC = () => {
   return (
-    <div className="max-w-4xl mx-auto px-8 py-32 md:py-52 flex flex-col items-center text-center gap-20">
-      <div className="space-y-12">
-        <span className="uppercase-tracking text-[#8da399]">Our Philosophy</span>
-        <h2 className="text-6xl md:text-7xl font-light leading-tight serif text-[#1a1a1a]">
+    <div className="max-w-4xl mx-auto px-6 md:px-8 py-20 md:py-52 flex flex-col items-center text-center gap-16 md:gap-20">
+      <div className="space-y-8 md:space-y-12">
+        <span className="uppercase-tracking text-[#8da399] text-[0.65rem] md:text-sm">Our Philosophy</span>
+        <h2 className="text-4xl md:text-7xl font-light leading-tight serif text-[#1a1a1a]">
           Spaces that <span className="italic">breathe.</span>
         </h2>
-        <div className="space-y-10 text-xl font-light leading-relaxed text-[#4a4a4a] max-w-2xl mx-auto">
+        <div className="space-y-8 md:space-y-10 text-lg md:text-xl font-light leading-relaxed text-[#4a4a4a] max-w-2xl mx-auto">
           <p>
             Traditional air fresheners mask smells with synthetic perfumes, adding more chemicals to your personal environment. <span className="font-medium text-[#1a1a1a]">mijah</span> does the opposite.
           </p>

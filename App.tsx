@@ -60,23 +60,29 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen">
-      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${isNavHidden ? 'nav-hidden' : ''} ${isNavScrolled ? 'nav-scrolled' : 'py-10 px-8 md:px-16 bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto w-full grid grid-cols-3 items-center px-8 md:px-16">
-          {/* Left Links */}
-          <div className="flex space-x-12 items-center justify-start">
-            <a href="#about" className="uppercase-tracking hover:opacity-40 transition-opacity">Philosophy</a>
-            <a href="#usage" className="uppercase-tracking hover:opacity-40 transition-opacity">Usage</a>
+      <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${isNavHidden ? 'nav-hidden' : ''} ${isNavScrolled ? 'nav-scrolled' : 'py-6 md:py-10 px-6 md:px-16 bg-transparent'}`}>
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-2 md:grid-cols-3 items-center">
+          {/* Left Links - Hidden on Mobile */}
+          <div className="hidden md:flex space-x-12 items-center justify-start">
+            <a href="#about" className="uppercase-tracking hover:opacity-40 transition-opacity whitespace-nowrap">Philosophy</a>
+            <a href="#usage" className="uppercase-tracking hover:opacity-40 transition-opacity whitespace-nowrap">Usage</a>
           </div>
 
-          {/* Center Logo */}
-          <div className="flex justify-center">
-            <span className="text-4xl font-light tracking-[0.5em] serif uppercase cursor-pointer">mijah</span>
+          {/* Center Logo - Centered on tablet/desktop, Left on mobile */}
+          <div className="flex md:justify-center justify-start">
+            <span className="text-2xl md:text-4xl font-light tracking-[0.4em] md:tracking-[0.5em] serif uppercase cursor-pointer">mijah</span>
           </div>
 
-          {/* Right Links */}
-          <div className="flex space-x-12 items-center justify-end">
-            <a href="#how" className="uppercase-tracking hover:opacity-40 transition-opacity">Science</a>
-            <a href="#sustainability" className="uppercase-tracking hover:opacity-40 transition-opacity">Sustainability</a>
+          {/* Right Links - Icons or hidden on mobile */}
+          <div className="flex items-center justify-end">
+            <div className="hidden md:flex space-x-12 items-center">
+              <a href="#how" className="uppercase-tracking hover:opacity-40 transition-opacity whitespace-nowrap">Science</a>
+              <a href="#sustainability" className="uppercase-tracking hover:opacity-40 transition-opacity whitespace-nowrap">Sustainability</a>
+            </div>
+            {/* Mobile Menu Trigger Placeholder (optional) */}
+            <div className="md:hidden">
+              <a href="#usage" className="uppercase-tracking text-[0.6rem]">Explore</a>
+            </div>
           </div>
         </div>
       </nav>

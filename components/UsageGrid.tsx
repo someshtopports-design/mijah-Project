@@ -29,13 +29,13 @@ export const UsageGrid: React.FC = () => {
   const [activeItem, setActiveItem] = useState<number | null>(null);
 
   return (
-    <div className="py-32 md:py-52 text-center">
-      <div className="max-w-7xl mx-auto px-8 md:px-16">
+    <div className="py-20 md:py-52 text-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-16">
         {/* Header */}
-        <div className="text-center mb-32">
-          <span className="uppercase-tracking text-[#8da399] mb-6 block">Versatility</span>
-          <h2 className="text-5xl md:text-7xl font-light mb-8 serif text-[#1a1a1a]">Where it works</h2>
-          <p className="text-lg font-light text-[#4a4a4a] max-w-2xl mx-auto leading-relaxed">
+        <div className="text-center mb-20 md:mb-32">
+          <span className="uppercase-tracking text-[#8da399] mb-6 block text-[0.65rem] md:text-sm">Versatility</span>
+          <h2 className="text-4xl md:text-7xl font-light mb-8 serif text-[#1a1a1a]">Where it works</h2>
+          <p className="text-base md:text-lg font-light text-[#4a4a4a] max-w-2xl mx-auto leading-relaxed">
             Designed to fit seamlessly into your daily life, from the shoes you wear to the spaces you inhabit.
           </p>
         </div>
@@ -75,8 +75,8 @@ export const UsageGrid: React.FC = () => {
         </div>
 
         {/* Science Section */}
-        <div className="mt-40 pt-40 border-t border-black/5">
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
+        <div className="mt-24 md:mt-40 pt-20 md:pt-40 border-t border-black/5">
+          <div className="grid lg:grid-cols-2 gap-16 md:gap-24 items-center">
             <div className="order-2 lg:order-1 relative group">
               <div className="absolute -inset-4 bg-[#8da399]/5 rounded-sm rotate-1 transition-transform group-hover:rotate-0 duration-700"></div>
               <img
@@ -85,9 +85,9 @@ export const UsageGrid: React.FC = () => {
                 className="relative w-full h-auto rounded-sm shadow-2xl transition-all duration-1000 grayscale-[0.3] group-hover:grayscale-0"
               />
             </div>
-            <div className="space-y-12 order-1 lg:order-2">
-              <span className="uppercase-tracking text-[#8da399]">Ingredient Science</span>
-              <h2 className="text-5xl md:text-7xl font-light serif leading-tight text-[#1a1a1a]">
+            <div className="space-y-10 md:space-y-12 order-1 lg:order-2 text-center lg:text-left">
+              <span className="uppercase-tracking text-[#8da399] text-[0.65rem] md:text-sm">Ingredient Science</span>
+              <h2 className="text-4xl md:text-7xl font-light serif leading-tight text-[#1a1a1a]">
                 The Power of <br /><span className="italic">Choice Materials.</span>
               </h2>
 
