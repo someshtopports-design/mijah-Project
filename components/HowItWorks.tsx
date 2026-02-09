@@ -26,16 +26,16 @@ export const HowItWorks: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 text-center">
         {[
-          { step: '01', title: 'Breathable Flow', desc: 'Air flows naturally through our custom-weave linen pouch.' },
-          { step: '02', title: 'Molecular Binding', desc: 'Tea leaves & charcoal particles trap odour molecules in their pores.' },
-          { step: '03', title: 'Moisture Control', desc: 'Excess humidity is pulled from the air, preventing stale scents.' },
-          { step: '04', title: 'Pure Return', desc: 'Clean, fragrance-free air is returned to your living space.' }
+          { step: '01', title: 'Carbon Capture', desc: 'Activated charcoal uses millions of micro-pores to physically trap and lock in organic odour molecules.' },
+          { step: '02', title: 'Tea Leaf Science', desc: 'Natural tannins in processed tea leaves chemically neutralize bacteria that cause persistent smells.' },
+          { step: '03', title: 'Dual Absorption', desc: 'Together, they act as a molecular sponge, pulling moisture and pollutants out of the air.' },
+          { step: '04', title: 'Warm Finishing', desc: 'A touch of essential oil provides a subtle, warm fragrance to leave your space feeling invited.' }
         ].map((item, i) => (
           <div key={i} className="space-y-8 group/step">
             <div className="text-5xl text-[#8da399]/20 serif italic group-hover/step:text-[#8da399] transition-all duration-500 scale-100 group-hover/step:scale-110">{item.step}</div>
             <div className="space-y-4">
               <h4 className="text-sm font-semibold uppercase-tracking text-[#1a1a1a]">{item.title}</h4>
-              <p className="text-base font-light leading-relaxed text-[#4a4a4a] max-w-[200px] mx-auto">
+              <p className="text-base font-light leading-relaxed text-[#4a4a4a] max-w-[200px] mx-auto text-sm md:text-base">
                 {item.desc}
               </p>
             </div>
