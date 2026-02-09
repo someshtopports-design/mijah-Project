@@ -7,8 +7,8 @@ export const HowItWorks: React.FC = () => {
       <div className="text-center mb-20 md:mb-32">
         <span className="uppercase-tracking text-[#8da399] mb-6 block text-[0.65rem] md:text-sm">Technical Design</span>
         <h2 className="text-4xl md:text-8xl font-light mb-8 md:mb-12 serif text-[#1a1a1a]">How it works</h2>
-        <p className="text-lg md:text-xl font-light text-[#4a4a4a] max-w-2xl mx-auto leading-relaxed italic">
-          The science of silence. A passive, continuous cycle of air purification that requires zero electricity and zero chemicals.
+        <p className="text-lg md:text-xl font-light text-[#4a4a4a] max-w-3xl mx-auto leading-relaxed italic">
+          Nature’s molecular engineering. A sophisticated fusion of tea leaf tannins and activated charcoal that traps and neutralizes odours, elegantly finished with a gentle infusion of essential oils for a warm, sensory experience.
         </p>
       </div>
 
