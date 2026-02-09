@@ -105,7 +105,31 @@ h4,
   opacity: 0;
 }
 
-.charcoal-gradient.nav-scrolled {
-  background-color: rgba(18, 18, 18, 0.8) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+@keyframes reveal {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-reveal {
+  animation: reveal 1.5s cubic-bezier(0.2, 0, 0.2, 1) forwards;
+}
+
+.serif-italic {
+  font-family: 'Cormorant Garamond', serif !important;
+  font-style: italic;
+}
+
+.ease-out-expo {
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skew-pattern {
+  transform: skewX(-12deg);
 }

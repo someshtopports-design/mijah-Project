@@ -11,12 +11,12 @@ export const Gallery: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
         <div className="md:col-span-7 perspective-container group">
-          <div className="hover-3d aspect-[4/5] overflow-hidden rounded-sm relative">
+          <div className="hover-3d aspect-[4/5] overflow-hidden rounded-sm relative shadow-2xl">
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-700 z-10"></div>
             <img
-              src="lifestyle-collage.jpg"
-              alt="mijah usage in various living spaces"
-              className="w-full h-full object-cover transition-all duration-1000"
+              src="/shoe-protection-aura.jpg"
+              alt="Mijah Shoe Protection"
+              className="w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-100"
             />
           </div>
         </div>

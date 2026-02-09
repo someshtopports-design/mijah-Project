@@ -38,15 +38,16 @@ export const About: React.FC = () => {
         </div>
       </div>
 
-      <div className="w-full max-w-5xl">
-        <div className="relative group">
-          <div className="absolute -inset-6 bg-[#8da399]/5 rounded-sm transition-transform group-hover:scale-[1.02] duration-1000"></div>
-          <div className="relative aspect-[16/9] overflow-hidden rounded-sm shadow-2xl">
-            <img
-              src="lifestyle-wardrobe.jpg"
-              alt="mijah in lifestyle settings"
-              className="w-full h-full object-cover grayscale-[0.1] group-hover:grayscale-0 transition-all duration-1000"
-            />
+      <div className="w-full max-w-6xl mx-auto">
+        <div className="relative group overflow-hidden rounded-sm shadow-2xl">
+          <div className="absolute inset-0 bg-black/10 z-10 group-hover:bg-transparent transition-all duration-1000"></div>
+          <img
+            src="/closet-solution.jpg"
+            alt="The Mijah Difference: Problem and Solution"
+            className="w-full h-auto object-cover transition-all duration-1000 scale-[1.02] group-hover:scale-100"
+          />
+          <div className="absolute top-10 right-10 z-20 hidden md:block">
+            <span className="uppercase-tracking text-white bg-black/20 backdrop-blur-md px-6 py-2 rounded-full text-[0.6rem]">Comparison Analysis</span>
           </div>
         </div>
       </div>

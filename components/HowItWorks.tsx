@@ -13,13 +13,14 @@ export const HowItWorks: React.FC = () => {
       </div>
 
       <div className="mb-32 md:mb-48 relative group max-w-5xl mx-auto perspective-container">
-        <div className="absolute inset-0 bg-[#8da399]/5 blur-3xl rounded-full scale-75 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-        <div className="hover-3d relative rounded-sm overflow-hidden border border-black/5 bg-white/50 backdrop-blur-sm p-4 md:p-16 shadow-2xl transition-all duration-700">
+        <div className="absolute inset-0 bg-[#8da399]/10 blur-3xl rounded-full scale-75 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+        <div className="relative rounded-sm overflow-hidden shadow-2xl transition-all duration-1000">
           <img
-            src="mijah-primary.png"
-            alt="mijah Scientific Airflow Diagram"
-            className="max-w-full mx-auto grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000"
+            src="/odour-neutralizer.jpg"
+            alt="Natural Odour Neutralization Process"
+            className="w-full h-auto object-cover transition-all duration-1000 scale-105 group-hover:scale-100"
           />
+          <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-all duration-700"></div>
         </div>
       </div>
 

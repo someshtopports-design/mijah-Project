@@ -9,10 +9,23 @@ export const FinalCTA: React.FC = () => {
         Freshness doesn’t <br /><span className="italic">need fragrance.</span>
       </h2>
       <p className="text-xl font-light text-[#4a4a4a] italic">Experience the silence of clean air.</p>
-      <div className="pt-8">
-        <button className="px-16 py-6 bg-[#1a1a1a] text-white text-[0.7rem] uppercase tracking-[0.4em] font-medium hover:bg-black transition-all hover:translate-y-[-2px] hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] rounded-sm">
-          Get notified at launch
-        </button>
+      <div className="pt-8 flex flex-col md:flex-row items-center justify-center gap-6">
+        <a
+          href="https://wa.me/919406294909"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-12 py-5 bg-[#1a1a1a] text-white text-[0.7rem] uppercase tracking-[0.4em] font-medium hover:bg-black transition-all hover:translate-y-[-2px] hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] rounded-sm"
+        >
+          Order on WhatsApp
+        </a>
+        <a
+          href="https://www.instagram.com/mijah_fresh?utm_source=qr&igsh=MXFremYyaW42dGs5YQ%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-12 py-5 border border-black/10 text-black text-[0.7rem] uppercase tracking-[0.4em] font-medium hover:bg-black/5 transition-all hover:translate-y-[-2px] rounded-sm"
+        >
+          Follow Instagram
+        </a>
       </div>
     </div>
   );

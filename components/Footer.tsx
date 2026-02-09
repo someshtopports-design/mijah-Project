@@ -18,8 +18,8 @@ export const Footer: React.FC = () => {
               <span className="uppercase-tracking text-[#8da399]">Navigation</span>
               <div className="flex flex-col gap-4">
                 <a href="#about" className="text-sm font-light text-white/70 hover:text-white transition-colors">Philosophy</a>
-                <a href="#usage" className="text-sm font-light text-white/70 hover:text-white transition-colors">Usage</a>
-                <a href="#how" className="text-sm font-light text-white/70 hover:text-white transition-colors">Science</a>
+                <a href="#collections" className="text-sm font-light text-white/70 hover:text-white transition-colors">Collections</a>
+                <a href="#science" className="text-sm font-light text-white/70 hover:text-white transition-colors">Science</a>
               </div>
             </div>
 
@@ -34,8 +34,22 @@ export const Footer: React.FC = () => {
             <div className="space-y-6">
               <span className="uppercase-tracking text-[#8da399]">Connect</span>
               <div className="flex flex-col gap-4">
-                <a href="#" className="text-sm font-light text-white/70 hover:text-white transition-colors">Instagram</a>
-                <a href="#" className="text-sm font-light text-white/70 hover:text-white transition-colors">LinkedIn</a>
+                <a
+                  href="https://www.instagram.com/mijah_fresh?utm_source=qr&igsh=MXFremYyaW42dGs5YQ%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-light text-white/70 hover:text-white transition-colors flex items-center gap-2"
+                >
+                  Instagram
+                </a>
+                <a
+                  href="https://wa.me/919406294909"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-light text-white/70 hover:text-white transition-colors"
+                >
+                  WhatsApp: +91 94062 94909
+                </a>
               </div>
             </div>
           </div>
