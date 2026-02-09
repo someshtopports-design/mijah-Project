@@ -7,7 +7,7 @@ export const Hero: React.FC = () => {
 
         <div className="mb-8 md:mb-12 overflow-hidden">
           <span className="uppercase-tracking text-[#8da399] block animate-reveal text-[0.65rem] md:text-sm">
-            Natural Air Purification / Est. 2024
+            Natural Air Purification
           </span>
         </div>
 

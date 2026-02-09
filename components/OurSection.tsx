@@ -62,7 +62,7 @@ export const OurSection: React.FC = () => {
                 {/* Header - Centered Selection for Maximum Visibility */}
                 <div className="flex flex-col items-center mb-24 md:mb-40 text-center">
                     <div className="mb-12">
-                        <span className="uppercase-tracking text-[#8da399] mb-4 block text-[0.6rem] md:text-sm">Collections / 2024</span>
+                        <span className="uppercase-tracking text-[#8da399] mb-4 block text-[0.6rem] md:text-sm">Collections</span>
                         <h2 className="text-6xl md:text-[10rem] font-light serif text-[#1a1a1a] leading-[0.85] tracking-tighter">
                             Our <span className="italic">Section</span>
                         </h2>

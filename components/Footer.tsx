@@ -56,7 +56,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="mt-24 pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-8">
-          <p className="text-[0.6rem] uppercase tracking-[0.3em] text-white/50">© 2024 mijah projects. All rights reserved.</p>
+          <p className="text-[0.6rem] uppercase tracking-[0.3em] text-white/50">© mijah projects. All rights reserved.</p>
           <div className="flex gap-8">
             <span className="text-[0.6rem] uppercase tracking-[0.3em] text-white/30 italic">Pure</span>
             <span className="text-[0.6rem] uppercase tracking-[0.3em] text-white/30 italic">Silent</span>
