@@ -44,7 +44,7 @@ const ourData = {
             {
                 name: 'Trunk Purifier',
                 description: 'Large-scale absorption for groceries, gear, and transit items.',
-                img: '/mijah-box-premium.jpg'
+                img: '/product-packaging.jpg'
             },
         ]
     },
@@ -75,10 +75,27 @@ const ourData = {
 
 export const OurSection: React.FC = () => {
     const [activeCategory, setActiveCategory] = useState<'spaces' | 'cars' | 'shoes'>('spaces');
-    const [hoveredItem, setHoveredItem] = useState<{ name: string, img: string } | null>(null);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
 
     const currentCategoryData = ourData[activeCategory];
-    const displayImage = hoveredItem?.img || currentCategoryData.image;
+
+    useEffect(() => {
+        if (isHovered) return;
+
+        const interval = setInterval(() => {
+            setActiveIndex((current) => (current + 1) % currentCategoryData.items.length);
+        }, 1500);
+
+        return () => clearInterval(interval);
+    }, [currentCategoryData.items.length, isHovered, activeCategory]);
+
+    // Reset index when category changes
+    useEffect(() => {
+        setActiveIndex(0);
+    }, [activeCategory]);
+
+    const displayItem = currentCategoryData.items[activeIndex];
 
     return (
         <section className="min-h-screen bg-[#fdfaf5] py-24 md:py-52 overflow-hidden relative border-t border-black/5">
@@ -101,7 +118,6 @@ export const OurSection: React.FC = () => {
                                     key={cat}
                                     onClick={() => {
                                         setActiveCategory(cat);
-                                        setHoveredItem(null);
                                     }}
                                     className={`px-6 md:px-10 py-2.5 md:py-3 rounded-full text-[0.6rem] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.4em] transition-all duration-700 font-medium ${activeCategory === cat ? 'bg-[#1a1a1a] text-white shadow-xl' : 'text-black/40 hover:text-black hover:bg-black/5'}`}
                                 >
@@ -125,20 +141,23 @@ export const OurSection: React.FC = () => {
                             <div
                                 key={item.name}
                                 className="group cursor-pointer py-12 border-b border-black/5 transition-all duration-700"
-                                onMouseEnter={() => setHoveredItem({ name: item.name, img: item.img })}
-                                onMouseLeave={() => setHoveredItem(null)}
+                                onMouseEnter={() => {
+                                    setIsHovered(true);
+                                    setActiveIndex(idx);
+                                }}
+                                onMouseLeave={() => setIsHovered(false)}
                             >
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-10">
-                                        <span className="text-[0.6rem] font-medium text-[#8da399]">0{idx + 1}</span>
-                                        <h4 className={`text-5xl font-light serif transition-all duration-700 ${hoveredItem?.name === item.name ? 'translate-x-6 italic' : 'group-hover:translate-x-2'}`}>
+                                        <span className={`text-[0.6rem] font-medium transition-colors duration-500 ${activeIndex === idx ? 'text-[#1a1a1a]' : 'text-[#8da399]'}`}>0{idx + 1}</span>
+                                        <h4 className={`text-5xl font-light serif transition-all duration-700 ${activeIndex === idx ? 'translate-x-6 italic text-[#1a1a1a]' : 'text-black/30'}`}>
                                             {item.name}
                                         </h4>
                                     </div>
-                                    <div className={`w-12 h-[1px] bg-black/10 transition-all duration-1000 ${hoveredItem?.name === item.name ? 'w-32 bg-black h-[1px]' : 'h-[1px]'}`}></div>
+                                    <div className={`w-12 h-[1px] transition-all duration-1000 ${activeIndex === idx ? 'w-32 bg-black h-[1px]' : 'bg-black/10 h-[1px]'}`}></div>
                                 </div>
 
-                                <div className={`overflow-hidden transition-all duration-1000 ${hoveredItem?.name === item.name ? 'max-h-20 opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
+                                <div className={`overflow-hidden transition-all duration-1000 ${activeIndex === idx ? 'max-h-20 opacity-100 mt-8' : 'max-h-0 opacity-0'}`}>
                                     <p className="ml-16 text-sm font-light leading-relaxed text-[#4a4a4a] max-w-sm">
                                         {item.description}
                                     </p>
@@ -150,17 +169,17 @@ export const OurSection: React.FC = () => {
                     <div className="col-span-6 sticky top-40">
                         <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-[0_50px_100px_rgba(0,0,0,0.12)] group">
                             <img
-                                src={displayImage}
+                                src={displayItem.img}
                                 alt=""
-                                className="w-full h-full object-cover transition-all duration-[2s] ease-out-expo scale-100 group-hover:scale-105"
-                                key={displayImage}
+                                className="w-full h-full object-cover transition-all duration-[1s] ease-out-expo scale-100 scale-105"
+                                key={displayItem.img}
                             />
                             <div className="absolute inset-0 bg-black/5"></div>
                             <div className="absolute bottom-0 left-0 w-full p-12 z-20">
                                 <div className="bg-white/5 backdrop-blur-3xl p-10 border border-white/10">
                                     <span className="uppercase-tracking text-white/60 text-[0.5rem] mb-2 block tracking-[0.5em]">Focus</span>
                                     <p className="text-4xl text-white serif italic">
-                                        {hoveredItem ? hoveredItem.name : currentCategoryData.title}
+                                        {displayItem.name}
                                     </p>
                                 </div>
                             </div>
@@ -173,14 +192,14 @@ export const OurSection: React.FC = () => {
                     <div className="sticky top-20 z-10 -mx-6 px-6 py-4 bg-[#fdfaf5]/80 backdrop-blur-md border-b border-black/5">
                         <div className="relative aspect-video rounded-sm overflow-hidden shadow-xl">
                             <img
-                                src={displayImage}
+                                src={displayItem.img}
                                 alt=""
                                 className="w-full h-full object-cover transition-all duration-1000"
-                                key={displayImage}
+                                key={displayItem.img}
                             />
                             <div className="absolute bottom-4 left-6">
                                 <p className="text-white text-xl serif italic drop-shadow-md">
-                                    {hoveredItem ? hoveredItem.name : currentCategoryData.title}
+                                    {displayItem.name}
                                 </p>
                             </div>
                         </div>
@@ -190,17 +209,18 @@ export const OurSection: React.FC = () => {
                         {currentCategoryData.items.map((item, idx) => (
                             <div
                                 key={item.name}
-                                className="py-10 border-b border-black/5 active:bg-black/5 transition-colors"
-                                onTouchStart={() => setHoveredItem({ name: item.name, img: item.img })}
-                                onClick={() => setHoveredItem({ name: item.name, img: item.img })}
+                                className={`py-10 border-b border-black/5 transition-colors ${activeIndex === idx ? 'bg-black/5' : ''}`}
+                                onClick={() => setActiveIndex(idx)}
                             >
                                 <div className="flex items-center gap-6">
-                                    <span className="text-[0.6rem] font-medium text-[#8da399]">0{idx + 1}</span>
-                                    <h4 className="text-2xl font-light serif text-[#1a1a1a]">{item.name}</h4>
+                                    <span className={`text-[0.6rem] font-medium ${activeIndex === idx ? 'text-[#1a1a1a]' : 'text-[#8da399]'}`}>0{idx + 1}</span>
+                                    <h4 className={`text-2xl font-light serif ${activeIndex === idx ? 'text-[#1a1a1a]' : 'text-black/40'}`}>{item.name}</h4>
                                 </div>
-                                <p className="mt-4 ml-10 text-xs font-light text-[#4a4a4a] leading-relaxed">
-                                    {item.description}
-                                </p>
+                                <div className={`overflow-hidden transition-all duration-700 ${activeIndex === idx ? 'max-h-40 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                                    <p className="ml-10 text-xs font-light text-[#4a4a4a] leading-relaxed">
+                                        {item.description}
+                                    </p>
+                                </div>
                             </div>
                         ))}
                     </div>
