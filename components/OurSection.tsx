@@ -5,51 +5,76 @@ const ourData = {
     spaces: {
         title: 'Spaces',
         label: 'Atmospheric Purity',
+        howItWorks: 'Mijah captures organic compounds in stagnant air, making it ideal for enclosed spaces like closets and living areas where odors tend to settle.',
         image: '/usage-storage.jpg',
         items: [
             {
-                name: 'Sachets',
-                description: 'Versatile odour absorption for drawers and small enclosures.',
-                img: '/closet-solution.jpg'
+                name: 'Wardrobe Sachet',
+                description: 'Slow-release adsorption for delicate fabrics and linens.',
+                img: '/lifestyle-wardrobe.jpg'
             },
             {
-                name: 'Car',
-                description: 'Continuous air purification for a fresh driving experience.',
+                name: 'Storage Box',
+                description: 'Heavy-duty odour elimination for seasonal storage and attics.',
+                img: '/usage-storage.jpg'
+            },
+            {
+                name: 'Closet Hanger',
+                description: 'Vertical air purification designed to blend into your attire.',
+                img: '/usage-wardrobe.jpg'
+            },
+        ]
+    },
+    cars: {
+        title: 'Cars',
+        label: 'Automotive Freshness',
+        howItWorks: 'Designed for the high-intensity cabin environment, our car series neutralizes tobacco, fuel, and upholstery odors through passive airflow.',
+        image: '/usage-car.jpg',
+        items: [
+            {
+                name: 'Dashboard Disc',
+                description: 'Passive purification that thrives on vehicle airflow.',
                 img: '/usage-car.jpg'
             },
             {
-                name: 'Hanger',
-                description: 'Designed to blend into your wardrobe while protecting fabrics.',
-                img: '/usage-wardrobe.jpg'
+                name: 'Seat Sachet',
+                description: 'Discreetly absorbs deep-set upholstery and cabin odours.',
+                img: '/odour-neutralizer.jpg'
+            },
+            {
+                name: 'Trunk Purifier',
+                description: 'Large-scale absorption for groceries, gear, and transit items.',
+                img: '/mijah-box-premium.jpg'
             },
         ]
     },
     shoes: {
         title: 'Shoes',
         label: 'Footwear Preservation',
+        howItWorks: 'By targeting moisture at the source, Mijah prevents the growth of odor-causing bacteria in the dark, warm environments of footwear.',
         image: '/shoe-protection-aura.jpg',
         items: [
             {
-                name: 'Sachets',
-                description: 'Compact power to neutralize moisture and bacteria in every pair.',
+                name: 'Sneaker Inserts',
+                description: 'Targeted moisture and bacteria neutralization for active footwear.',
                 img: '/shoe-protection-aura.jpg'
             },
             {
-                name: 'Knitted Dust',
-                description: 'Soft, breathable protection for your most delicate footwear.',
-                img: '/product-sachets-group.jpg'
+                name: 'Formal Preservation',
+                description: 'Delicate care for leather and suede, maintaining material integrity.',
+                img: '/shoe-odour-science.jpg'
             },
             {
-                name: 'Premium Case',
-                description: 'A sophisticated storage solution for your footwear collection, preserving material integrity.',
-                img: '/product-close-box.jpg'
+                name: 'Knitted Dust Bag',
+                description: 'Breathable protection that keeps your collection fresh while stored.',
+                img: '/product-sachets-group.jpg'
             },
         ]
     }
 };
 
 export const OurSection: React.FC = () => {
-    const [activeCategory, setActiveCategory] = useState<'spaces' | 'shoes'>('spaces');
+    const [activeCategory, setActiveCategory] = useState<'spaces' | 'cars' | 'shoes'>('spaces');
     const [hoveredItem, setHoveredItem] = useState<{ name: string, img: string } | null>(null);
 
     const currentCategoryData = ourData[activeCategory];
@@ -64,13 +89,13 @@ export const OurSection: React.FC = () => {
                     <div className="mb-12">
                         <span className="uppercase-tracking text-[#8da399] mb-4 block text-[0.6rem] md:text-sm">Collections</span>
                         <h2 className="text-6xl md:text-[10rem] font-light serif text-[#1a1a1a] leading-[0.85] tracking-tighter">
-                            Our <span className="italic">Section</span>
+                            Our <span className="italic">Collections</span>
                         </h2>
                     </div>
 
                     {/* Selection Pill - Prominent and Centered */}
                     <div className="inline-flex bg-white/50 backdrop-blur-md p-2 rounded-full border border-black/5 shadow-sm scale-110 md:scale-125">
-                        {(['spaces', 'shoes'] as const).map((cat) => (
+                        {(['spaces', 'cars', 'shoes'] as const).map((cat) => (
                             <button
                                 key={cat}
                                 onClick={() => {
@@ -82,6 +107,12 @@ export const OurSection: React.FC = () => {
                                 {cat}
                             </button>
                         ))}
+                    </div>
+
+                    <div className="mt-12 md:mt-24 max-w-2xl">
+                        <p className="text-sm md:text-lg font-light text-[#4a4a4a] leading-relaxed opacity-80 italic">
+                            &ldquo; {currentCategoryData.howItWorks} &rdquo;
+                        </p>
                     </div>
                 </div>
 

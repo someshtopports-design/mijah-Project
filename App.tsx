@@ -65,6 +65,7 @@ const App: React.FC = () => {
             <a href="#collections" className="uppercase-tracking hover:opacity-40 transition-opacity whitespace-nowrap">Collections</a>
           </div>
           <div className="md:hidden flex justify-start">
+            <a href="#about" className="uppercase-tracking text-[0.6rem] hover:opacity-40 transition-opacity">Philosophy</a>
           </div>
 
           <div className="flex justify-center">
@@ -77,7 +78,7 @@ const App: React.FC = () => {
               <a href="#sustainability" className="uppercase-tracking hover:opacity-40 transition-opacity whitespace-nowrap">Sustainability</a>
             </div>
             <div className="md:hidden">
-              <a href="#collections" className="uppercase-tracking text-[0.6rem] border-b border-black/10">Menu</a>
+              <a href="#collections" className="uppercase-tracking text-[0.6rem] hover:opacity-40 transition-opacity">Collections</a>
             </div>
           </div>
         </div>
