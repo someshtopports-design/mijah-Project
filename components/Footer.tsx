@@ -43,12 +43,12 @@ export const Footer: React.FC = () => {
                   Instagram
                 </a>
                 <a
-                  href="https://wa.me/919406294909"
+                  href="https://wa.me/918839106738"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-light text-white/70 hover:text-white transition-colors"
                 >
-                  WhatsApp: +91 94062 94909
+                  WhatsApp: +91 88391 06738
                 </a>
               </div>
             </div>

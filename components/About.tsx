@@ -16,6 +16,10 @@ export const About: React.FC = () => {
           <p>
             By leveraging the natural adsorption properties of treated tea leaves and activated charcoal, we don't just hide odors—we eliminate them at the molecular level.
           </p>
+          <p className="text-base italic border-t border-black/5 pt-8">
+            <span className="font-semibold block mb-2 not-italic uppercase tracking-widest text-[0.6rem] text-[#8da399]">Our Story</span>
+            We are just normal people with a home-grown setup—driven by the simple enthusiasm to create a purer atmosphere using the power of nature. Every sachet is a product of this passion.
+          </p>
         </div>
       </div>
 
