@@ -2,11 +2,15 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <div className="relative min-h-screen w-full flex flex-col items-center justify-center bg-transparent overflow-hidden px-6 md:px-8 pt-20 pb-32">
-      <div className="max-w-6xl mx-auto w-full flex flex-col items-center text-center relative z-20">
+    <div className="relative min-h-screen w-full flex flex-col items-center justify-center bg-transparent overflow-hidden px-6 md:px-8 pt-40 pb-32">
+      {/* Background Brand Name */}
+      <h1 className="text-7xl md:text-[14rem] font-light serif tracking-tighter text-[#1a1a1a] opacity-[0.03] absolute top-20 left-1/2 -translate-x-1/2 pointer-events-none select-none z-0">
+        MIJAH
+      </h1>
 
-        <div className="mb-8 md:mb-12 overflow-hidden">
-          <span className="uppercase-tracking text-[#8da399] block animate-reveal text-[0.65rem] md:text-sm">
+      <div className="max-w-6xl mx-auto w-full flex flex-col items-center text-center relative z-20">
+        <div className="mb-6 md:mb-10 overflow-hidden">
+          <span className="uppercase-tracking text-[#8da399] block animate-reveal text-[0.6rem] md:text-xs">
             Natural Air Purification
           </span>
         </div>
@@ -19,20 +23,20 @@ export const Hero: React.FC = () => {
           </span>
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-12 items-end text-left w-full mt-10 md:mt-20">
-          <div>
+        <div className="grid md:grid-cols-2 gap-12 items-center md:items-end md:text-left w-full mt-10 md:mt-20">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <p className="text-xl md:text-3xl font-light leading-relaxed text-[#1a1a1a] max-w-md">
               A sensory experience designed for the modern home.
               Fragrance-free, sustainable, and <span className="italic serif">effortlessly elegant.</span>
             </p>
           </div>
-          <div className="flex flex-col items-start gap-8">
-            <p className="text-sm md:text-base font-light text-[#4a4a4a] max-w-xs leading-relaxed border-l border-black/10 pl-8">
+          <div className="flex flex-col items-center md:items-start gap-8 text-center md:text-left">
+            <p className="text-sm md:text-base font-light text-[#4a4a4a] max-w-xs leading-relaxed md:border-l border-black/10 md:pl-8">
               Mijah utilizes the natural adsorption properties of treated tea leaves and activated charcoal to cleanse your atmosphere.
             </p>
             <a
               href="#collections"
-              className="group flex items-center gap-6 text-[0.65rem] md:text-[0.75rem] uppercase tracking-[0.4em] font-medium"
+              className="group flex items-center gap-6 text-[0.6rem] md:text-[0.75rem] uppercase tracking-[0.4em] font-medium"
             >
               <span className="pb-1 border-b border-black">Discover Collections</span>
               <div className="w-12 h-[1px] bg-black group-hover:w-20 transition-all duration-700"></div>
