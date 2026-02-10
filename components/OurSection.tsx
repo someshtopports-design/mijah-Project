@@ -29,17 +29,17 @@ const ourData = {
         title: 'Cars',
         label: 'Automotive Freshness',
         howItWorks: 'Designed for the high-intensity cabin environment, our car series neutralizes tobacco, fuel, and upholstery odors through passive airflow.',
-        image: '/usage-car.jpg',
+        image: '/car-vent.jpg',
         items: [
             {
-                name: 'Dashboard Disc',
-                description: 'Passive purification that thrives on vehicle airflow.',
-                img: '/usage-car.jpg'
+                name: 'Vent Purifier',
+                description: 'Clips seamlessly onto AC vents to purify incoming air through constant flow.',
+                img: '/car-vent.jpg'
             },
             {
-                name: 'Seat Sachet',
-                description: 'Discreetly absorbs deep-set upholstery and cabin odours.',
-                img: '/odour-neutralizer.jpg'
+                name: 'Headrest Hanger',
+                description: 'Suspended adsorption that targets cabin air at the head-level for maximum effectiveness.',
+                img: '/car-headrest.jpg'
             },
             {
                 name: 'Trunk Purifier',
