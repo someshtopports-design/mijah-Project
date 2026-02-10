@@ -167,18 +167,24 @@ export const OurSection: React.FC = () => {
                     </div>
 
                     <div className="col-span-6 sticky top-40">
-                        <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-[0_50px_100px_rgba(0,0,0,0.12)] group">
-                            <img
-                                src={displayItem.img}
-                                alt=""
-                                className="w-full h-full object-cover transition-all duration-[1s] ease-out-expo scale-100 scale-105"
-                                key={displayItem.img}
-                            />
-                            <div className="absolute inset-0 bg-black/5"></div>
+                        <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-[0_50px_100px_rgba(0,0,0,0.12)]">
+                            {currentCategoryData.items.map((item, idx) => (
+                                <div
+                                    key={item.img}
+                                    className={`absolute inset-0 transition-opacity duration-[1.5s] ease-in-out ${activeIndex === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+                                >
+                                    <img
+                                        src={item.img}
+                                        alt={item.name}
+                                        className={`w-full h-full object-cover transition-transform duration-[2.5s] ease-out-expo ${activeIndex === idx ? 'scale-105' : 'scale-100'}`}
+                                    />
+                                    <div className="absolute inset-0 bg-black/5"></div>
+                                </div>
+                            ))}
                             <div className="absolute bottom-0 left-0 w-full p-12 z-20">
-                                <div className="bg-white/5 backdrop-blur-3xl p-10 border border-white/10">
+                                <div className="bg-white/5 backdrop-blur-3xl p-10 border border-white/10 transition-all duration-700">
                                     <span className="uppercase-tracking text-white/60 text-[0.5rem] mb-2 block tracking-[0.5em]">Focus</span>
-                                    <p className="text-4xl text-white serif italic">
+                                    <p className="text-4xl text-white serif italic transition-all duration-1000 key-fade" key={displayItem.name}>
                                         {displayItem.name}
                                     </p>
                                 </div>
@@ -191,14 +197,20 @@ export const OurSection: React.FC = () => {
                 <div className="lg:hidden space-y-12">
                     <div className="sticky top-20 z-10 -mx-6 px-6 py-4 bg-[#fdfaf5]/80 backdrop-blur-md border-b border-black/5">
                         <div className="relative aspect-video rounded-sm overflow-hidden shadow-xl">
-                            <img
-                                src={displayItem.img}
-                                alt=""
-                                className="w-full h-full object-cover transition-all duration-1000"
-                                key={displayItem.img}
-                            />
-                            <div className="absolute bottom-4 left-6">
-                                <p className="text-white text-xl serif italic drop-shadow-md">
+                            {currentCategoryData.items.map((item, idx) => (
+                                <div
+                                    key={item.img}
+                                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${activeIndex === idx ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+                                >
+                                    <img
+                                        src={item.img}
+                                        alt={item.name}
+                                        className={`w-full h-full object-cover transition-transform duration-[2s] ${activeIndex === idx ? 'scale-105' : 'scale-100'}`}
+                                    />
+                                </div>
+                            ))}
+                            <div className="absolute bottom-4 left-6 z-20">
+                                <p className="text-white text-xl serif italic drop-shadow-md transition-all duration-700" key={displayItem.name}>
                                     {displayItem.name}
                                 </p>
                             </div>
