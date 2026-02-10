@@ -85,7 +85,7 @@ export const OurSection: React.FC = () => {
 
         const interval = setInterval(() => {
             setActiveIndex((current) => (current + 1) % currentCategoryData.items.length);
-        }, 1500);
+        }, 2500);
 
         return () => clearInterval(interval);
     }, [currentCategoryData.items.length, isHovered, activeCategory]);
