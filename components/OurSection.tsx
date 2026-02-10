@@ -52,22 +52,22 @@ const ourData = {
         title: 'Shoes',
         label: 'Footwear Preservation',
         howItWorks: 'By targeting moisture at the source, Mijah prevents the growth of odor-causing bacteria in the dark, warm environments of footwear.',
-        image: '/shoe-protection-aura.jpg',
+        image: '/shoe-formal.jpg',
         items: [
             {
-                name: 'Sneaker Inserts',
-                description: 'Targeted moisture and bacteria neutralization for active footwear.',
-                img: '/shoe-protection-aura.jpg'
+                name: 'Formal',
+                description: 'Delicate care for leather and suede, maintaining material integrity and classic elegance.',
+                img: '/shoe-formal.jpg'
             },
             {
-                name: 'Formal Preservation',
-                description: 'Delicate care for leather and suede, maintaining material integrity.',
-                img: '/shoe-odour-science.jpg'
+                name: 'Sporty',
+                description: 'Targeted moisture and bacteria neutralization for high-intensity active footwear.',
+                img: '/shoe-sporty.jpg'
             },
             {
-                name: 'Knitted Dust Bag',
-                description: 'Breathable protection that keeps your collection fresh while stored.',
-                img: '/product-sachets-group.jpg'
+                name: 'Funky',
+                description: 'Bold protection for your most unique pairs, keeping them fresh and ready for the street.',
+                img: '/shoe-funky.jpg'
             },
         ]
     }
@@ -93,20 +93,22 @@ export const OurSection: React.FC = () => {
                         </h2>
                     </div>
 
-                    {/* Selection Pill - Prominent and Centered */}
-                    <div className="inline-flex bg-white/50 backdrop-blur-md p-2 rounded-full border border-black/5 shadow-sm scale-110 md:scale-125">
-                        {(['spaces', 'cars', 'shoes'] as const).map((cat) => (
-                            <button
-                                key={cat}
-                                onClick={() => {
-                                    setActiveCategory(cat);
-                                    setHoveredItem(null);
-                                }}
-                                className={`px-10 py-3 rounded-full text-xs uppercase tracking-[0.4em] transition-all duration-700 font-medium ${activeCategory === cat ? 'bg-[#1a1a1a] text-white shadow-xl' : 'text-black/40 hover:text-black hover:bg-black/5'}`}
-                            >
-                                {cat}
-                            </button>
-                        ))}
+                    {/* Selection Pill - Improved Mobile Responsiveness */}
+                    <div className="flex justify-center w-full overflow-x-auto no-scrollbar pb-4 md:pb-0">
+                        <div className="inline-flex bg-white/50 backdrop-blur-md p-1.5 md:p-2 rounded-full border border-black/5 shadow-sm scale-100 md:scale-125 whitespace-nowrap">
+                            {(['spaces', 'cars', 'shoes'] as const).map((cat) => (
+                                <button
+                                    key={cat}
+                                    onClick={() => {
+                                        setActiveCategory(cat);
+                                        setHoveredItem(null);
+                                    }}
+                                    className={`px-6 md:px-10 py-2.5 md:py-3 rounded-full text-[0.6rem] md:text-xs uppercase tracking-[0.3em] md:tracking-[0.4em] transition-all duration-700 font-medium ${activeCategory === cat ? 'bg-[#1a1a1a] text-white shadow-xl' : 'text-black/40 hover:text-black hover:bg-black/5'}`}
+                                >
+                                    {cat}
+                                </button>
+                            ))}
+                        </div>
                     </div>
 
                     <div className="mt-12 md:mt-24 max-w-2xl">

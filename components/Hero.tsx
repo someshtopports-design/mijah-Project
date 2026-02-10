@@ -36,10 +36,23 @@ export const Hero: React.FC = () => {
             </p>
             <a
               href="#collections"
-              className="group flex items-center gap-6 text-[0.6rem] md:text-[0.75rem] uppercase tracking-[0.4em] font-medium"
+              className="group flex items-center gap-4 text-[0.7rem] md:text-[0.8rem] uppercase tracking-[0.4em] font-bold text-black"
             >
-              <span className="pb-1 border-b border-black">Discover Collections</span>
-              <div className="w-12 h-[1px] bg-black group-hover:w-20 transition-all duration-700"></div>
+              <span className="pb-1 border-b-2 border-black">Discover Collections</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20" height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="group-hover:translate-x-2 transition-transform duration-500"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
             </a>
           </div>
         </div>
